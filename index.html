@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astralore</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <video id="homeBgVideo" autoplay muted loop playsinline preload="auto">
+    <source src="images/background.mp4" type="video/mp4">
+  </video>
+  <div id="termsModal">
+    <div id="termsBox">
+      <h2>Terms &amp; Conditions</h2>
+      <p>
+        By accessing and playing <b>Astralore</b>, you agree to use this game for personal enjoyment only.<br>
+        Your gameplay data may be stored locally for your convenience.<br>
+        Use at your own risk.<br>
+        See <a href="terms.html" style="color:#ffd700; text-decoration:underline;">full Terms &amp; Conditions</a> or contact the developer for more info.
+      </p>
+      <button id="acceptBtn">Accept &amp; Continue</button>
+    </div>
+  </div>
+  <div class="menu-screen" id="menuScreen">
+    <div class="menu-logo">Astralore</div>
+    <button id="playBtn" class="menu-btn">Play</button>
+    <button id="menuSettingsBtn" class="menu-btn">Settings</button>
+  </div>
+  <div id="settingsModal">
+    <div id="settingsBox">
+      <h2>Settings</h2>
+      <label for="volumeRange">Sound Volume</label>
+      <input type="range" id="volumeRange" min="0" max="100" value="80">
+      <span id="volumeValue">80</span>%
+      <br>
+      <label for="difficultySelect">Difficulty</label>
+      <select id="difficultySelect">
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Hard</option>
+        <option value="easy">Easy</option>
+      </select>
+      <br>
+      <button id="closeSettingsBtn">Close</button>
+    </div>
+  </div>
+  <div class="container" id="container" style="display:none;">
+    <button id="fullscreenBtn" title="Fullscreen">
+      <img src="images/maximize.png" alt="Fullscreen" />
+    </button>
+    <div id="gameOver">
+      <div>Game Over!</div>
+      <div class="highScorePopup" id="highScorePopup">High Score: ?</div>
+      <button id="restartBtn">Restart</button>
+    </div>
+    <canvas id="game" width="640" height="320"></canvas>
+  </div>
+  <script src="assets/script.js"></script>
+  </script>
+</body>
+</html>
